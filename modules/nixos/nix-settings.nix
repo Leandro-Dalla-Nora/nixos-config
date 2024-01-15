@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, nixpkgs, ... }:
 
 {
   # Nix Configuration

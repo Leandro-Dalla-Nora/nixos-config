@@ -1,4 +1,4 @@
-{ ... }:
+{ nixpkgs, pkgs, ... }:
 
 {
   # Allow unfree packages
