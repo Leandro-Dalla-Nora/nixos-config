@@ -4,7 +4,6 @@
   # Enable Hyprland
   programs.hyprland = {
     enable = true;
-    xserver = true;
   };
   
   environment = {
