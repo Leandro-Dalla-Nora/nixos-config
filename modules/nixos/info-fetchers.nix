@@ -10,7 +10,7 @@
     #octofetch
     #htop
     #bottom
-    btop
+    #btop
     #kmon
 
     # vulkan-tools

@@ -22,7 +22,6 @@
           ./modules/nixos/bootloader.nix
           ./modules/nixos/wayland.nix
           ./modules/nixos/sound.nix
-          ./modules/nixos/programming.nix
           ./modules/nixos/hyprland.nix
           ./modules/nixos/xserver.nix
           ./modules/nixos/virtualisation.nix
