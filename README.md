@@ -12,9 +12,11 @@ Gostei bastante do sistema anti falhas, que permite voltar a gerações anterior
 
 [Organização do diretório](https://github.com/Frost-Phoenix/nixos-config)
 
+[Arquivos modules/nixos](https://github.com/XNM1/linux-nixos-hyprland-config-dotfiles/tree/main)
+
 [Nix flakes](https://www.youtube.com/watch?v=S3VBi6kHw5c&list=PLko9chwSoP-15ZtZxu64k_CuTzXrFpxPE&index=2)
 
 [Configuration collection](https://nixos.wiki/wiki/Configuration_Collection)
 
-[Modularidade](https://www.youtube.com/watch?v=bV3hfalcSKs)
+[Deletar versões antigas do nixos](https://medium.com/thelinux/how-to-remove-old-generations-of-nixos-b072db4ad01e)
 

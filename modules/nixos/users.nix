@@ -1,23 +1,33 @@
-{ pkgs, ... }:
-
+{ pkgs, inputs, username, ...}:
+let
+  username = "leandro";
+  packages = with pkgs; [
+    vscode
+    brave
+  ];
+in
 {
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.leandro = {
+  imports = [ inputs.home-manager.nixosModules.home-manager ];
+  home-manager = {
+    useUserPackages = true;
+    useGlobalPkgs = true;
+    extraSpecialArgs = { inherit inputs username; };
+    users.${username} = {
+      imports = [ (import ../user) ];
+      home.username = "${username}";
+      home.homeDirectory = "/home/${username}";
+      home.stateVersion = "22.11";
+      programs.home-manager.enable = true;
+    };
+  };
+
+  users.users.${username} = {
     isNormalUser = true;
-    description = "Leandro";
+    description = "${username}";
     extraGroups = [ "networkmanager" "input" "wheel" "video" "audio" "tss" ];
     shell = pkgs.fish;
-    packages = with pkgs; [
-      #spotify
-      #youtube-music
-      #discord
-      #tdesktop
-      #vscode
-      #brave
-
-      # -------- adicionar os demais pacotes de usuário, como git, vscode, etc, da pasta users
-    ];
   };
+  nix.settings.allowed-users = [ "${username}" ];
 
   # Change runtime directory size
   services.logind.extraConfig = "RuntimeDirectorySize=8G";

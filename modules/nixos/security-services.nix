@@ -27,12 +27,12 @@
   security.pam.services.swaylock = {};
   # security.polkit.enable = true;
   programs.browserpass.enable = true;
-  services.clamav = {
-    daemon.enable = true;
-    updater.enable = true;
-    updater.interval = "daily"; #man systemd.time
-    updater.frequency = 12;
-  };
+  # services.clamav = {
+  #   daemon.enable = true;
+  #   updater.enable = true;
+  #   updater.interval = "daily"; #man systemd.time
+  #   updater.frequency = 12;
+  # };
   programs.firejail = {
     enable = true;
     wrappedBinaries = { 
@@ -56,7 +56,7 @@
 
   environment.systemPackages = with pkgs; [
     vulnix       #scan command: vulnix --system
-    clamav       #scan command: sudo freshcalm; clamscan [options] [file/directory/-]
+    # clamav       #scan command: sudo freshcalm; clamscan [options] [file/directory/-]
     chkrootkit   #scan command: sudo chkrootkit
 
     # passphrase2pgp

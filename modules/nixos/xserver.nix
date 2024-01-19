@@ -1,6 +1,15 @@
-{pkgs, ...}:
-
+{ pkgs, username, ... }: 
 {
-  # enable xserver
-  services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+    layout = "br";
+    libinput = {
+      enable = true;
+      # mouse = {
+      #   accelProfile = "flat";
+      # };
+    };
+  };
+  # To prevent getting stuck at shutdown
+  systemd.extraConfig = "DefaultTimeoutStopSec=10s";
 }

@@ -3,6 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... } @ inputs: {
@@ -14,7 +19,7 @@
         modules = [
           ./modules/nixos/nixpkgs.nix
           ./modules/nixos/utils.nix
-          ./modules/nixos/auto-upgrade.nix
+          #./modules/nixos/auto-upgrade.nix
           ./modules/nixos/configuration.nix
           ./modules/nixos/terminal-utils.nix
           ./modules/nixos/networking.nix
@@ -30,10 +35,10 @@
           ./modules/nixos/info-fetchers.nix
           ./modules/nixos/security-services.nix
           ./modules/nixos/environment-variables.nix
-          ./modules/nixos/mac-randomize.nix
+          #./modules/nixos/mac-randomize.nix
           ./modules/nixos/printing.nix
           ./modules/nixos/theme.nix
-          ./modules/nixos/dns.nix
+          #./modules/nixos/dns.nix
           ./modules/nixos/nix-settings.nix
           ./modules/nixos/screen.nix
           ./modules/nixos/gnome.nix
