@@ -1,4 +1,4 @@
-{ pkgs, inputs, username, ...}:
+{ pkgs, inputs, ...}:
 let
   username = "leandro";
   packages = with pkgs; [
@@ -11,12 +11,22 @@ in
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    extraSpecialArgs = { inherit inputs username; };
+    extraSpecialArgs = { 
+      inherit inputs username; 
+    };
     users.${username} = {
-      imports = [ (import ../user) ];
+      imports = [ 
+        # ( ../user/default.nix )
+         ../user/browser/browser.nix 
+        ../user/development/ide.nix
+        ../user/development/programming.nix
+        ../user/development/git.nix
+        ../user/browser/browser.nix
+        ../user/office/office.nix
+       ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
-      home.stateVersion = "22.11";
+      home.stateVersion = "23.11";
       programs.home-manager.enable = true;
     };
   };
