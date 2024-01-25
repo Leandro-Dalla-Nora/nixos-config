@@ -1,10 +1,6 @@
 { pkgs, inputs, ...}:
 let
   username = "leandro";
-  packages = with pkgs; [
-    vscode
-    brave
-  ];
 in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
