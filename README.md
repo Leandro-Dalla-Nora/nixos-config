@@ -12,6 +12,8 @@ Gostei bastante do sistema anti falhas, que permite voltar a gerações anterior
 
 [Organização do diretório](https://github.com/Frost-Phoenix/nixos-config)
 
+[Hyprland](https://github.com/justinlime/dotfiles/tree/main/nix/users/brimstone)
+
 [Arquivos modules/nixos](https://github.com/XNM1/linux-nixos-hyprland-config-dotfiles/tree/main)
 
 [Nix flakes](https://www.youtube.com/watch?v=S3VBi6kHw5c&list=PLko9chwSoP-15ZtZxu64k_CuTzXrFpxPE&index=2)
