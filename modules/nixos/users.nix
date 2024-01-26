@@ -12,13 +12,25 @@ in
     };
     users.${username} = {
       imports = [ 
-        # ( ../user/default.nix )
-         ../user/browser/browser.nix 
+        ../user/browser/browser.nix
+
+        ../user/colors/default.nix
+
+        ../user/development/git.nix
         ../user/development/ide.nix
         ../user/development/programming.nix
-        ../user/development/git.nix
-        ../user/browser/browser.nix
+
         ../user/office/office.nix
+
+        # ../user/themes/default.nix
+        ../user/themes/gtk.nix
+        ../user/themes/qt.nix
+
+        # ../user/wayland/default.nix
+        ../user/wayland/foot.nix
+        ../user/wayland/hyprland.nix
+        ../user/wayland/waybar.nix
+        ../user/wayland/wofi.nix
        ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
