@@ -22,3 +22,6 @@ Gostei bastante do sistema anti falhas, que permite voltar a gerações anterior
 
 [Deletar versões antigas do nixos](https://medium.com/thelinux/how-to-remove-old-generations-of-nixos-b072db4ad01e)
 
+[Gtk e Qt](https://www.youtube.com/watch?v=O-VGFH3eMhY)
+
+[Themes](https://github.com/redyf/nixdots/tree/main/home/desktop/themes)
