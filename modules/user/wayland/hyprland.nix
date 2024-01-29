@@ -1,14 +1,18 @@
+{ 
 custom ? {
-  fontsize = "12";
+  fontsize = "14";
   primary_accent = "cba6f7";
   secondary_accent = "89b4fa";
   tertiary_accent = "f5f5f5";
   background = "11111B";
   opacity = ".85";
   cursor = "Numix-Cursor";
-}
+},
+inputs,
+pkgs,
+... 
+}:
 
-{ inputs, pkgs, ... }:
 {
   # Extra packages my hyprland config uses
   home.packages = with pkgs; [
@@ -23,7 +27,7 @@ custom ? {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     settings = {
-      "$mainMod" = SUPER;
+      "$mainMod" = "SUPER";
       # monitor = [
       #   ",preferred,auto,auto"
       #   "eDP-1,1920x1080@60,0x0,1"

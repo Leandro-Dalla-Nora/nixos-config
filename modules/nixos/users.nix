@@ -14,7 +14,7 @@ in
       imports = [ 
         ../user/browser/browser.nix
 
-        ../user/colors/default.nix
+        # ../user/colors/default.nix
 
         ../user/development/git.nix
         ../user/development/ide.nix
@@ -22,9 +22,7 @@ in
 
         ../user/office/office.nix
 
-        # ../user/themes/default.nix
         ../user/themes/gtk.nix
-        ../user/themes/qt.nix
 
         # ../user/wayland/default.nix
         ../user/wayland/foot.nix

@@ -2,9 +2,11 @@
 
 {
   # Enable Theme
-  environment.variables.GTK_THEME = "Catppuccin-Macchiato-Standard-Teal-Dark";
-  environment.variables.XCURSOR_THEME = "Catppuccin-Macchiato-Teal";
-  environment.variables.XCURSOR_SIZE = "24";
+  environment.variables = {
+    GTK_THEME = "Catppuccin-Macchiato-Standard-Teal-Dark";
+    XCURSOR_THEME = "Catppuccin-Macchiato-Teal";
+    XCURSOR_SIZE = "24";
+  };
   console = {
     earlySetup = true;
     colors = [
@@ -35,10 +37,10 @@
       size = "standard";
       variant = "macchiato";
     };
-    discord = pkgs.discord.override {
-      withOpenASAR = true;
-      withTTS = true;
-    };
+    # discord = pkgs.discord.override {
+    #   withOpenASAR = true;
+    #   withTTS = true;
+    # };
   };
 
   environment.systemPackages = with pkgs; [
