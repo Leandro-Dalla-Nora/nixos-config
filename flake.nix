@@ -17,7 +17,7 @@
     themes.url = "github:RGBCube/ThemeNix";
   };
 
-  outputs = { self, nixpkgs, themes, ... } @ inputs: {
+  outputs = { self, nixpkgs, ... } @ inputs: {
     nixosConfigurations.leandro = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { 
@@ -60,7 +60,6 @@
         ./modules/nixos/open-ssh.nix
         ./modules/nixos/hardware-configuration.nix
       ];
-      # theme = themes.custom (import ./modules/user/themes/colors/catppuccin-mocha.nix);
     };
   };
 }

@@ -1,4 +1,12 @@
-{ pkgs, ... }:
+{ 
+    pkgs, 
+    custom ? {
+        font = "RobotoMono Nerd Font";
+        fontsize = 12;
+        cursor = "Numix-Cursor";
+    },
+    ... 
+}:
 {
     gtk = {
         enable = true;
@@ -12,8 +20,9 @@
         };
         
         font = {
-            name = "RobotoMono Nerd Font";
-            size = "12";
+            name = "${custom.font}";
+            # size = "${custom.fontsize}";
+            size = 12;
         };
 
         iconTheme = {
@@ -22,7 +31,7 @@
         };
 
         cursorTheme = {
-            name = "Numix-Cursor";
+            name = "${custom.cursor}";
             package = pkgs.numix-cursor-theme;
         };
         

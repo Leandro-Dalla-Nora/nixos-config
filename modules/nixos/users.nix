@@ -1,6 +1,7 @@
-{ pkgs, inputs, ...}:
+{ pkgs, themes, inputs, ...}:
 let
   username = "leandro";
+  theme = themes.custom (import ./themes/colors/catppuccin-mocha.nix);
 in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
@@ -8,7 +9,7 @@ in
     useUserPackages = true;
     useGlobalPkgs = true;
     extraSpecialArgs = { 
-      inherit inputs username; 
+      inherit inputs username theme; 
     };
     users.${username} = {
       imports = [ 
@@ -29,6 +30,8 @@ in
         ../user/wayland/hyprland.nix
         ../user/wayland/waybar.nix
         ../user/wayland/wofi.nix
+
+        ../user/default.nix
        ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";

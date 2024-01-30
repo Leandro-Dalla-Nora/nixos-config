@@ -10,7 +10,7 @@ let
     background = "11111B";
     opacity = "1";
     cursor = "Numix-Cursor";
-    palette = import ./user/colors/default.nix;
+    palette = import ./themes/colors/default.nix;
   };
 in
 {
@@ -18,7 +18,7 @@ in
   # of tools and services i use on a daily basis
   _module.args = { inherit inputs custom; };
   imports = [ 
-    ./themes
+    # ../user/themes/colors/default.nix
     ./wayland
   ];
   programs.direnv.enable = true;
