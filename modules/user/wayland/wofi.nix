@@ -27,6 +27,8 @@
         #window {
           border-radius: 40px;
           background: ${custom.palette.primary_background_rgba}
+          width: 1000px;
+          height: 1000px;
         }
         #input {
           border-radius: 100px;
@@ -49,6 +51,9 @@
           color: #${custom.background};
         }
         #entry:hover {
+        }
+        #results {
+          overflow-y: scroll;
         }
         '';
     };
