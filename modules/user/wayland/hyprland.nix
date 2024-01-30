@@ -1,6 +1,6 @@
 { 
 custom ? {
-  fontsize = "14";
+  fontsize = "12";
   primary_accent = "cba6f7";
   secondary_accent = "89b4fa";
   tertiary_accent = "f5f5f5";
@@ -40,7 +40,7 @@ pkgs,
         "swaync"
       ];
       input = {
-        kb_layout = "us";
+	kb_layout = "br";
         follow_mouse = true;
         force_no_accel = 1;
         touchpad = {
@@ -106,6 +106,7 @@ pkgs,
         disable_splash_rendering = true;
       };
       bind = [
+        "$mainMod, T, exec, fish"
         # Exit to tty
         "$mainMod SHIFT, X, exit "
         # Launch
@@ -120,7 +121,7 @@ pkgs,
         "$mainMod, E, togglefloating "
         "$mainMod SHIFT, Q, killactive"
         # Focus Windows
-        "$mainMod, H, movefocus, l"
+	"$mainMod, TAB, movefocus, l"
         "$mainMod, L, movefocus, r"
         "$mainMod, K, movefocus, u"
         "$mainMod, J, movefocus, d"
@@ -129,7 +130,7 @@ pkgs,
         "$mainMod SHIFT,L,movewindow,r"
         "$mainMod SHIFT,K,movewindow,u"
         "$mainMod SHIFT,J,movewindow,d"
-        # Switch workspaces
+#        # Switch workspaces
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
         "$mainMod, 3, workspace, 3"
