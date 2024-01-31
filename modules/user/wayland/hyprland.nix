@@ -23,6 +23,11 @@ pkgs,
     swaylock-effects
     swaynotificationcenter
   ];
+  #environment.sessionVariables = { 
+  #  NIXOS_OZONE_WL = "1";
+  #  WLR_NO_HARDWARE_CURSORS = "1";
+  #};
+  
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
@@ -40,7 +45,7 @@ pkgs,
         "swaync"
       ];
       input = {
-	kb_layout = "br";
+	      kb_layout = "br";
         follow_mouse = true;
         force_no_accel = 1;
         touchpad = {
@@ -50,7 +55,7 @@ pkgs,
 
       general = {
         gaps_in = 4;
-        gaps_out = 10;
+        gaps_out = 4;
         border_size = 2;
         "col.active_border" = "rgb(${custom.primary_accent})";
         "col.inactive_border" = "rgba(${custom.background}00)";
@@ -121,7 +126,7 @@ pkgs,
         "$mainMod, E, togglefloating "
         "$mainMod SHIFT, Q, killactive"
         # Focus Windows
-	"$mainMod, TAB, movefocus, l"
+	      "$mainMod, TAB, movefocus, l"
         "$mainMod, L, movefocus, r"
         "$mainMod, K, movefocus, u"
         "$mainMod, J, movefocus, d"
@@ -168,10 +173,10 @@ pkgs,
         ",XF86MonBrightnessUp,exec,light -A 5"
         ",XF86MonBrightnessDown,exec,light -U 5"
         # Volume Keys
-        ",XF86AudioRaiseVolume,exec,pactl set-sink-volume @DEFAULT_SINK@ +5%  "
-        ",XF86AudioLowerVolume,exec,pactl set-sink-volume @DEFAULT_SINK@ -5%  "
+        ",XF86AudioRaiseVolume,exec,pactl set-sink-volume @DEFAULT_SINK@ +5%"
+        ",XF86AudioLowerVolume,exec,pactl set-sink-volume @DEFAULT_SINK@ -5%"
       ];
-      bindl = [
+      bindl = [       
         ",switch:on:Lid Switch, exec, swaylock -f -i ~/photos/wallpapers/wallpaper.png"
         ",switch:off:Lid Switch, exec, swaylock -f -i ~/photos/wallpapers/wallpaper.png"
       ];

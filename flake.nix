@@ -34,7 +34,7 @@
         ./modules/nixos/bootloader.nix
         ./modules/nixos/wayland.nix
         ./modules/nixos/sound.nix
-        ./modules/nixos/hyprland.nix
+        #./modules/nixos/hyprland.nix
         ./modules/nixos/xserver.nix
         ./modules/nixos/virtualisation.nix
         ./modules/nixos/users.nix
@@ -49,7 +49,7 @@
         ./modules/nixos/nix-settings.nix
         ./modules/nixos/screen.nix
         ./modules/nixos/gnome.nix
-        ./modules/nixos/fonts.nix
+        #./modules/nixos/fonts.nix
         ./modules/nixos/usb.nix
         ./modules/nixos/vpn.nix
         ./modules/nixos/gc.nix

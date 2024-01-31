@@ -36,9 +36,7 @@ custom ? {
         "custom/launcher" 
       ];
       modules-center= [
-        "cava#left"
         "hyprland/workspaces"
-        "cava#right"
       ];
       modules-right= [
         "tray" 
