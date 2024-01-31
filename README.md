@@ -25,3 +25,5 @@ Gostei bastante do sistema anti falhas, que permite voltar a gerações anterior
 [Gtk e Qt](https://www.youtube.com/watch?v=O-VGFH3eMhY)
 
 [Themes](https://github.com/redyf/nixdots/tree/main/home/desktop/themes)
+
+[Programas para wayland](https://github.com/natpen/awesome-wayland?tab=readme-ov-file)
