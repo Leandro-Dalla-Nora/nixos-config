@@ -1,7 +1,7 @@
 { 
 custom ? {
   font = "RobotoMono Nerd Font";
-  fontsize = "12";
+  fontsize = "10";
   primary_accent = "cba6f7";
   secondary_accent = "89b4fa";
   tertiary_accent = "f5f5f5";
@@ -27,13 +27,14 @@ custom ? {
     settings.mainBar = {
       position= "top";
       layer= "top";
-      height= 35;
+      height= 20;
       margin-top= 0;
       margin-bottom= 0;
       margin-left= 0;
       margin-right= 0;
       modules-left= [
         "custom/launcher" 
+        "clock" 
       ];
       modules-center= [
         "hyprland/workspaces"
@@ -43,7 +44,6 @@ custom ? {
         "battery"
         "pulseaudio" 
         "network"
-        "clock" 
       ];
       clock= {
         format = " {:%a, %d %b, %I:%M %p}";
@@ -98,7 +98,7 @@ custom ? {
         format-disconnected = "󰖪 0% ";
       };
       tray= {
-        icon-size= 20;
+        icon-size= 15;
         spacing= 8;
       };
       pulseaudio= {
@@ -129,10 +129,9 @@ custom ? {
                 border: none;
                 border-radius: 0px;
                 font-family: ${custom.font};
-                font-size: 14px;
+                font-size: ${custom.fontsize};
                 min-height: 0;
             }
-
             window#waybar {
                 background: ${custom.palette.primary_background_rgba};
             }
@@ -187,17 +186,17 @@ custom ? {
                 padding: 10px 10px 15px 25px;
                 margin-left: 7px;
                 font-weight: bold;
-                font-size: 16px;
+                font-size: ${custom.fontsize};
             }
             #custom-launcher {
                 color: #${custom.secondary_accent};
                 background: #${custom.palette.tertiary_background_hex};
                 border-radius: 0px 0px 40px 0px;
                 margin: 0px;
-                padding: 0px 35px 0px 15px;
-                font-size: 28px;
+                padding: 0px 18px 0px 10px;
+                font-size: 18px;
             }
-	    #window{
+	          #window{
                 background: #${custom.palette.tertiary_background_hex};
                 padding-left: 15px;
                 padding-right: 15px;

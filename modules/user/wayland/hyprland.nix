@@ -135,7 +135,7 @@ pkgs,
         "$mainMod SHIFT,L,movewindow,r"
         "$mainMod SHIFT,K,movewindow,u"
         "$mainMod SHIFT,J,movewindow,d"
-#        # Switch workspaces
+        # Switch workspaces
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
         "$mainMod, 3, workspace, 3"

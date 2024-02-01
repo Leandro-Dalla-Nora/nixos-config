@@ -11,4 +11,9 @@
       wayland = true;
     };
   };
+  
+  # environment.systemPackages = with pkgs; [
+  #   wayland-protocols
+  #   weston
+  # ];
 }
