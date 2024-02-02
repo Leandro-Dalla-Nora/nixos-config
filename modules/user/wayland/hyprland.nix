@@ -173,8 +173,15 @@ pkgs,
         ",XF86MonBrightnessUp,exec,light -A 5"
         ",XF86MonBrightnessDown,exec,light -U 5"
         # Volume Keys
-        ",XF86AudioRaiseVolume,exec,pactl set-sink-volume @DEFAULT_SINK@ +5%"
-        ",XF86AudioLowerVolume,exec,pactl set-sink-volume @DEFAULT_SINK@ -5%"
+        ",XF86AudioRaiseVolume,exec,pamixer -i 5"
+        ",XF86AudioLowerVolume,exec,pamixer -d 5"
+        # Mute/unmute system
+        ", XF86AudioMute, exec, pamixer -t"
+        # Media control
+        ", XF86AudioPlay, exec, playerctl play-pause"
+        ", XF86AudioPrev, exec, playerctl previous"
+        ", XF86AudioNext, exec, playerctl next"
+        
       ];
       bindl = [       
         ",switch:on:Lid Switch, exec, swaylock -f -i ~/photos/wallpapers/wallpaper.png"
