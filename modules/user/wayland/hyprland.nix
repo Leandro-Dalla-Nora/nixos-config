@@ -181,7 +181,8 @@ pkgs,
         ", XF86AudioPlay, exec, playerctl play-pause"
         ", XF86AudioPrev, exec, playerctl previous"
         ", XF86AudioNext, exec, playerctl next"
-        
+        # flameshot
+        ", XF86XK_Print"
       ];
       bindl = [       
         ",switch:on:Lid Switch, exec, swaylock -f -i ~/photos/wallpapers/wallpaper.png"

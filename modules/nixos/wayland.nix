@@ -12,8 +12,26 @@
     };
   };
   
-  # environment.systemPackages = with pkgs; [
-  #   wayland-protocols
-  #   weston
-  # ];
+  environment.systemPackages = with pkgs; [
+    # wayland-protocols
+    # weston
+    at-spi2-atk
+    qt6.qtwayland
+    swaylock-effects
+    swayidle
+    # grim
+    # slurp
+    swappy
+    wl-clipboard
+    cliphist
+    clipboard-jh
+    wtype
+    wlrctl
+    hyprpicker
+    pyprland
+    dunst
+    wlogout
+    wpaperd
+
+  ];
 }
