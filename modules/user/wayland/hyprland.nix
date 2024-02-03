@@ -16,27 +16,22 @@ pkgs,
 {
   # Extra packages my hyprland config uses
   home.packages = with pkgs; [
-    grim
     slurp
     swaybg
     swayidle
     swaylock-effects
     swaynotificationcenter
   ];
-  #environment.sessionVariables = { 
-  #  NIXOS_OZONE_WL = "1";
-  #  WLR_NO_HARDWARE_CURSORS = "1";
-  #};
   
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     settings = {
       "$mainMod" = "SUPER";
-      # monitor = [
-      #   ",preferred,auto,auto"
-      #   "eDP-1,1920x1080@60,0x0,1"
-      # ];
+      monitor = [
+        ",preferred,auto,auto"
+        # "eDP-1,1920x1080@60,0x0,1"
+      ];
       exec-once = [
         "waybar"
         "swaybg -i ~/photos/wallpapers/wallpaper.png"
@@ -111,12 +106,10 @@ pkgs,
         disable_splash_rendering = true;
       };
       bind = [
-        "$mainMod, T, exec, fish"
         # Exit to tty
         "$mainMod SHIFT, X, exit "
         # Launch
         "$mainMod, D, exec, wofi"
-        ''$mainMod,P,exec,mkdir -p ~/photos/screenshots; grim -t png -g "$(slurp)" ~/photos/screenshots/$(date +%Y-%m-%d_%H-%m-%s).png''
         "$mainMod SHIFT,N,exec, swaync-client -t -sw"
         "$mainMod SHIFT,M,exec, swaylock -f -i ~/photos/wallpapers/wallpaper.png"
         # Window Options
@@ -125,16 +118,19 @@ pkgs,
         "$mainMod, F, fullscreen"
         "$mainMod, E, togglefloating "
         "$mainMod SHIFT, Q, killactive"
+        # apps bind
+        "$mainMod, K, exec, kitty"
         # Focus Windows
 	      "$mainMod, TAB, movefocus, l"
+        "$mainMod SHIFT, TAB, movefocus, r"
         "$mainMod, L, movefocus, r"
         "$mainMod, K, movefocus, u"
         "$mainMod, J, movefocus, d"
         # Move Windows
-        "$mainMod SHIFT,H,movewindow,l"
-        "$mainMod SHIFT,L,movewindow,r"
-        "$mainMod SHIFT,K,movewindow,u"
-        "$mainMod SHIFT,J,movewindow,d"
+        "$mainMod SHIFT, left,  movewindow,l"
+        "$mainMod SHIFT, right, movewindow,r"
+        "$mainMod SHIFT, up,    movewindow,u"
+        "$mainMod SHIFT, down,  movewindow,d"
         # Switch workspaces
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
@@ -181,8 +177,10 @@ pkgs,
         ", XF86AudioPlay, exec, playerctl play-pause"
         ", XF86AudioPrev, exec, playerctl previous"
         ", XF86AudioNext, exec, playerctl next"
-        # flameshot
-        ", XF86XK_Print"
+        # screenshot
+        ", Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
+        # wlogout
+        ", XF86PowerOff, exec, wlogout"
       ];
       bindl = [       
         ",switch:on:Lid Switch, exec, swaylock -f -i ~/photos/wallpapers/wallpaper.png"
@@ -231,11 +229,11 @@ pkgs,
       # will start a submap called "resize"
       submap=resize
 
-      # sets repeatable binds for resizing the active window
-      binde=,L,resizeactive,15 0
-      binde=,H,resizeactive,-15 0
-      binde=,K,resizeactive,0 -15
-      binde=,J,resizeactive,0 15
+      # sets repeatable binds for resizing the active window      
+      binde = SUPER+CTRL, left , resizeactive, -15 0
+      binde = SUPER+CTRL, down , resizeactive, 0 15
+      binde = SUPER+CTRL, up   , resizeactive, 0 -15
+      binde = SUPER+CTRL, right, resizeactive, 15 0
 
       # use reset to go back to the global submap
       bind=,escape,submap,reset 

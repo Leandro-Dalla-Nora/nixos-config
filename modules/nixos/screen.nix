@@ -15,6 +15,5 @@
     # wlsunset
     gammastep
     brightnessctl
-    flameshot
   ];
 }

@@ -16,7 +16,7 @@
             allow_images = true;
             width = "25%";
             hide_scroll = true;
-            term = "foot";
+            term = "kitty";
             show = "drun";
         };
         style =''

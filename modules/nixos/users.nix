@@ -26,7 +26,6 @@ in
         ../user/themes/gtk.nix
 
         # ../user/wayland/default.nix
-        ../user/wayland/foot.nix
         ../user/wayland/hyprland.nix
         ../user/wayland/waybar.nix
         ../user/wayland/wofi.nix

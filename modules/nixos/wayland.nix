@@ -13,14 +13,12 @@
   };
   
   environment.systemPackages = with pkgs; [
-    # wayland-protocols
-    # weston
     at-spi2-atk
     qt6.qtwayland
     swaylock-effects
     swayidle
-    # grim
-    # slurp
+    grim
+    slurp
     swappy
     wl-clipboard
     cliphist
@@ -32,6 +30,7 @@
     dunst
     wlogout
     wpaperd
-
+    kitty
+    gnome.gnome-terminal
   ];
 }

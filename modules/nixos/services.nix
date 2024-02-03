@@ -44,5 +44,6 @@
     xdg-utils
     avizo
     gifsicle
+    haruna
   ];
 }

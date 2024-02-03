@@ -5,5 +5,6 @@
     libreoffice
     gnome.gnome-calculator
     gnome.nautilus
+    zathura
   ];
 }
