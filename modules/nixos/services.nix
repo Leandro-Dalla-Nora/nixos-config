@@ -4,6 +4,8 @@
   # Systemd services setup
   systemd.packages = with pkgs; [
     auto-cpufreq
+    preload
+    prelink
   ];
   
   # Enable Services
@@ -13,15 +15,15 @@
   programs.fish.enable = true;
   programs.dconf.enable = true;
   services.dbus.enable = true;
-  # services.dbus.packages = with pkgs; [ # Ative para 
-  # 	gnome2.GConf
-  # ];
+  services.dbus.packages = with pkgs; [ # Ative para 
+  	gnome2.GConf
+  ];
   services.mpd.enable = true;
   programs.thunar.enable = true;
   services.tumbler.enable = true; 
   services.fwupd.enable = true;
   services.auto-cpufreq.enable = true;
-  # services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
   environment.systemPackages = with pkgs; [
     psi-notify
