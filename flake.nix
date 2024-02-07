@@ -13,8 +13,6 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    themes.url = "github:RGBCube/ThemeNix";
   };
 
   outputs = { self, nixpkgs, ... } @ inputs: {
@@ -27,14 +25,13 @@
         ./modules/nixos/nixpkgs.nix
         ./modules/nixos/utils.nix
         #./modules/nixos/auto-upgrade.nix
-        ./modules/nixos/configuration.nix
+        ./modules/nixos/version.nix
         ./modules/nixos/terminal-utils.nix
         ./modules/nixos/networking.nix
         ./modules/nixos/keyMap.nix
         ./modules/nixos/bootloader.nix
         ./modules/nixos/wayland.nix
         ./modules/nixos/sound.nix
-        # ./modules/nixos/hyprland.nix
         # ./modules/nixos/xserver.nix
         ./modules/nixos/virtualisation.nix
         ./modules/nixos/users.nix
@@ -44,7 +41,6 @@
         ./modules/nixos/environment-variables.nix
         #./modules/nixos/mac-randomize.nix
         ./modules/nixos/printing.nix
-        # ./modules/nixos/theme.nix
         #./modules/nixos/dns.nix
         ./modules/nixos/nix-settings.nix
         ./modules/nixos/screen.nix
