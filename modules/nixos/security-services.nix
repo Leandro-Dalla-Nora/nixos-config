@@ -3,7 +3,7 @@
 {
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  # programs.mtr.enable = true;
+  programs.mtr.enable = true;
   # programs.gnupg.agent = {
   #   enable = true;
   #   enableSSHSupport = true;
@@ -48,14 +48,11 @@
         executable = "${lib.getBin pkgs.zathura}/bin/zathura";
         profile = "${pkgs.firejail}/etc/firejail/zathura.profile";
       };
-      discord = {
-        executable = "${lib.getBin pkgs.discord}/bin/discord";
-      };
     };
   };
 
   environment.systemPackages = with pkgs; [
-    vulnix       #scan command: vulnix --system
+    # vulnix       #scan command: vulnix --system
     # clamav       #scan command: sudo freshcalm; clamscan [options] [file/directory/-]
     chkrootkit   #scan command: sudo chkrootkit
 

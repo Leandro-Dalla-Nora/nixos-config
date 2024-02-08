@@ -33,6 +33,7 @@
         ./modules/nixos/wayland.nix
         ./modules/nixos/sound.nix
         # ./modules/nixos/xserver.nix
+        # ./modules/nixos/gnome.nix
         ./modules/nixos/virtualisation.nix
         ./modules/nixos/users.nix
         ./modules/nixos/bluetooth.nix
@@ -41,10 +42,10 @@
         ./modules/nixos/environment-variables.nix
         #./modules/nixos/mac-randomize.nix
         ./modules/nixos/printing.nix
-        #./modules/nixos/dns.nix
+        # ./modules/nixos/dns.nix
+        ./modules/nixos/blocky.nix
         ./modules/nixos/nix-settings.nix
         ./modules/nixos/screen.nix
-        # ./modules/nixos/gnome.nix
         ./modules/nixos/fonts.nix
         ./modules/nixos/usb.nix
         ./modules/nixos/vpn.nix
