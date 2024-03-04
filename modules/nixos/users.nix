@@ -1,7 +1,6 @@
-{ pkgs, themes, inputs, ...}:
+{ pkgs, inputs, ...}:
 let
   username = "leandro";
-  theme = themes.custom (import ./themes/colors/catppuccin-mocha.nix);
 in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
@@ -9,7 +8,7 @@ in
     useUserPackages = true;
     useGlobalPkgs = true;
     extraSpecialArgs = { 
-      inherit inputs username theme; 
+      inherit inputs username; 
     };
     users.${username} = {
       imports = [ 
@@ -22,6 +21,8 @@ in
         ../user/development/programming.nix
 
         ../user/office/office.nix
+
+        # ../user/shell/fish.nix
 
         ../user/themes/gtk.nix
 
@@ -43,7 +44,7 @@ in
     isNormalUser = true;
     description = "${username}";
     extraGroups = [ "networkmanager" "input" "wheel" "video" "audio" "tss" ];
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
   nix.settings.allowed-users = [ "${username}" ];
 

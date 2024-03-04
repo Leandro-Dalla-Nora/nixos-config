@@ -12,7 +12,7 @@
   services.geoclue2.enable = true;
   programs.direnv.enable = true;
   services.upower.enable = true;
-  programs.fish.enable = true;
+
   programs.dconf.enable = true;
   services.dbus.enable = true;
   services.dbus.packages = with pkgs; [ # Ative para 

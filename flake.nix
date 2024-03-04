@@ -43,7 +43,7 @@
         #./modules/nixos/mac-randomize.nix
         ./modules/nixos/printing.nix
         # ./modules/nixos/dns.nix
-        ./modules/nixos/blocky.nix
+        # ./modules/nixos/blocky.nix
         ./modules/nixos/nix-settings.nix
         ./modules/nixos/screen.nix
         ./modules/nixos/fonts.nix
@@ -56,6 +56,7 @@
         ./modules/nixos/services.nix
         ./modules/nixos/open-ssh.nix
         ./modules/nixos/hardware-configuration.nix
+        ./modules/nixos/zsh.nix
       ];
     };
   };

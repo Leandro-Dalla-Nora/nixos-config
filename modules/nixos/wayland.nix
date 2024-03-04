@@ -31,6 +31,5 @@
     wlogout
     wpaperd
     kitty
-    gnome.gnome-terminal
   ];
 }
