@@ -35,3 +35,6 @@ Algo que acho fundamental é que pude aprimorar a minha disciplina de ficar no c
 [Gtk e Qt](https://www.youtube.com/watch?v=O-VGFH3eMhY)
 
 [Programas para wayland](https://github.com/natpen/awesome-wayland?tab=readme-ov-file)
+
+### Comando para autualizar o nixos
+`sudo nixos-rebuild switch --flake .#leandro`
