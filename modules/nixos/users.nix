@@ -19,6 +19,7 @@ in
         ../user/development/git.nix
         ../user/development/ide.nix
         ../user/development/programming.nix
+        # ../user/development/mysql.nix
 
         ../user/office/office.nix
 

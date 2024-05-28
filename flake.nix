@@ -56,6 +56,7 @@
         ./modules/nixos/open-ssh.nix
         ./modules/nixos/hardware-configuration.nix
         ./modules/nixos/zsh.nix
+        ./modules/nixos/mysql.nix
       ];
     };
   };
