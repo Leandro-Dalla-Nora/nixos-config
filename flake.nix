@@ -34,7 +34,7 @@
         ./modules/nixos/sound.nix
         # ./modules/nixos/xserver.nix
         # ./modules/nixos/gnome.nix
-        # ./modules/nixos/virtualisation.nix
+        ./modules/nixos/virtualisation.nix
         ./modules/nixos/users.nix
         ./modules/nixos/bluetooth.nix
         ./modules/nixos/info-fetchers.nix
